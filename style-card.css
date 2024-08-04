@@ -11,7 +11,12 @@
     font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+    font-family: 'CeraPro-light';
+    src: url('assets/fonts/cera-pro/CeraPro-Light.woff') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -58,7 +63,11 @@ body {
     display: flex;
     gap: 20px;
 }
-
+.breadcrumbs{
+    display: flex;
+    margin-left: 60px;
+    font-family: 'CeraPro-Medium', Arial, sans-serif; 
+}
 .header__nav-link {
     color: rgb(36, 36, 36);
     text-decoration: none;
@@ -136,6 +145,20 @@ body {
     height: auto;
 }
 
+.product-thumbnails__image {
+    width: auto;
+    height: calc(25% - 7.5px);
+    object-fit: cover;
+    border: 2px solid transparent;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-thumbnails__image:hover,
+.product-thumbnails__image:focus {
+    border-color: green;
+}
+
 .product-main__image-container {
     position: relative;
     max-height: 500px; /* Ограничиваем максимальную высоту основного изображения */
@@ -151,27 +174,42 @@ body {
     object-fit: contain;
 }
 
+.product-main__magnifier {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+    padding: 5px;
+}
+
 .product-details {
     display: flex;
     flex-direction: column;
-    max-width: 500px;
+    max-width: 700px;
     margin-left: auto;
-    margin-top: 0;
     gap: 20px;
     align-self: flex-start; /* Выравнивание текста по началу изображения */
+    font-family: 'CeraPro-Medium', Arial, sans-serif;
 }
 
 .product-details__title {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: -30px;
+}
+
+.product-details__description-title {
+    font-size: 16px;
+    margin-top: -30px;
 }
 
 .product-details__price-rating {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    position: relative; /* Добавлено для позиционирования линии */
 }
 
 .product-details__price {
@@ -196,7 +234,7 @@ body {
 }
 
 .product-details__size {
-    margin-bottom: 20px;
+    margin-top: -60px;
 }
 
 .product-details__size-options {
@@ -209,7 +247,12 @@ body {
     background: none;
     padding: 10px 15px;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 50%; 
+    width: 40px; 
+    height: 40px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .size-option:hover,
@@ -223,6 +266,10 @@ body {
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+}
+
+.product-details__meta {
+    margin-top: -40px;
 }
 
 .quantity-selector {
@@ -282,17 +329,155 @@ body {
 }
 
 .product-details__share {
-    font-size: 14px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
     color: #666;
+    margin-top: -50px;
+    font-weight: bold;
+    
 }
 
 .social-icons {
+    margin-left: 20px;
     display: flex;
     gap: 10px;
 }
 
 .social-icons img {
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
     cursor: pointer;
+}
+
+/* Вторая секция */
+
+.product-info {
+    width: calc(100% - 120px); /* Ширина, уменьшая отступы с обеих сторон */
+    margin: 0 auto; /* Центрирование */
+    padding: 20px 60px;
+    font-family: 'CeraPro-Medium', Arial, sans-serif;
+}
+
+.product-info__tabs {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.product-info__tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: none;
+    font-size: 18px;
+    font-family: 'CeraPro-Medium', Arial, sans-serif;
+    align-items: start;
+}
+
+.product-info__tab--active {
+    color: #46A358;
+    border-bottom: 3px solid #46A358;
+}
+
+.product-info__content {
+    display: none;
+    font-family: 'CeraPro-Light', Arial, sans-serif;
+}
+
+.product-info__content--active {
+    display: block;
+}
+
+/* Секция "Related Products" */
+
+.related-products {
+    width: calc(100% - 120px); /* Ширина с учетом отступов по бокам */
+    margin: 0 auto; /* Центрирование */
+    padding: 20px 60px;
+    font-family: 'CeraPro-Medium', Arial, sans-serif;
+}
+
+.related-products__title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #46A358;
+    position: relative;
+}
+
+.related-products__title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px; /* Расположение линии под заголовком */
+    height: 1px; /* Толщина линии */
+    background-color: #666; /* Цвет линии */
+    opacity: 0.5; /* Полупрозрачность */
+}
+
+.related-products__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.related-product {
+    flex: 1 1 calc(20% - 20px); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.related-product__image {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.related-product__name {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.related-product__price {
+    font-size: 14px;
+    color: #46A358;
+}
+
+.related-products__pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.related-products__pagination-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #46A358;
+    margin: 0 5px;
+    cursor: pointer;
+    opacity: 0.5;
+}
+
+.related-products__pagination-circle--active {
+    opacity: 1;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .related-product {
+        flex: 1 1 calc(50% - 20px); /* Две карточки в ряд на планшетах */
+    }
+}
+
+@media (max-width: 480px) {
+    .related-product {
+        flex: 1 1 100%; /* Одна карточка в ряд на мобильных устройствах */
+    }
 }
