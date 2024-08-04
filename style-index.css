@@ -1,4 +1,4 @@
-@import url("style-card.css");
+/*@import url("style-card.css");*/
 
 @font-face {
     font-weight: 300; 
@@ -35,6 +35,124 @@ body {
     margin: 0 auto; 
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    color: rgba(49, 49, 49, 0.171);
+    font-family: 'CeraPro-Medium', Arial, sans-serif;
+    position: relative;
+    height: 50px;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0; /* Линия расположена внизу хедера */
+    height: 0.1px; /* Толщина серой линии */
+    background-color: #666; 
+    opacity: 0.5; 
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-image {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.header__title {
+    font-size: 24px;
+    margin: 0;
+}
+
+.header__nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.header__nav > a {
+    display: flex;
+    font-weight: 500;
+    font-family: 'Cera Pro';
+}
+
+.test {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.breadcrumbs{
+    display: flex;
+    margin-left: 60px;
+    font-family: 'CeraPro-Medium', Arial, sans-serif; 
+}
+.header__nav-link {
+    color: rgb(36, 36, 36);
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.header__nav-link--active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -17px; /* Положение зеленой линии */
+    height: 3px;
+    background-color: #46A358;
+}
+
+.header__nav-link:hover {
+    text-decoration: underline;
+}
+
+.header__login-cart {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: -20px;
+}
+
+.header__search-image {
+    position: relative;
+    height: 20px;
+}
+
+.header__cart-image {
+    height: 22px;
+}
+
+.header__login-button {
+    display: flex;
+    align-items: top;
+    background-color: #46A358;
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.header__login-icon {
+    width: 20px; 
+    height: 20px; 
+    margin-right: 8px; 
+}
+
 .welcome {
     display: flex;
     font-family: Cera Pro;
@@ -50,7 +168,7 @@ body {
 .big_welcome {
     font-size: 70px;
     font-weight: 800;
-    margin: 0 0 0 0;
+    margin: 0;
 }
 
 .welcome__btn {
