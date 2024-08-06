@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greenshop</title>
+    <link rel="stylesheet" href="./assets/normalize.css" />
+    <link href="./style-order.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="container">
+        <p class="fs_fifteen">
+          <span class="bold_paragraph">Home</span> / Shop / Checkout
+        </p>
+        <div class="subcontainer">
+          <!-- биллинг аддресс -->
+          <div class="billing_address">
+            <p class="bold_paragraph fs_seventeen">Billing Address</p>
+            <div class="form">
+              <div class="form_div" id="first_name">
+                <label for="firstName" class="fs_fifteen"
+                  >First Name <a href="#" class="asterisk">*</a></label
+                ><br />
+                <input type="text" class="form_input" /><br />
+              </div>
+              <div class="form_div" id="last_name">
+                <label for="lastName" class="fs_fifteen"
+                  >Last Name <a href="#" class="asterisk">*</a></label
+                ><br />
+                <input type="text" class="form_input" /><br />
+              </div>
+              <div class="form_div" id="country">
+                <label for="countryOrRegion" class="fs_fifteen"
+                  >Country / Region <a href="#" class="asterisk">*</a></label
+                ><br />
+                <select class="form_select">
+                  <option value="" class="fs_fourteen">
+                    <p class="fs_fourteen">Select a country / region</p>
+                  </option></select
+                ><br />
+              </div>
+              <div class="form_div" id="town">
+                <label for="townOrCity" class="fs_fifteen"
+                  >Town / City <a href="#" class="asterisk">*</a></label
+                ><br />
+                <input type="text" class="form_input" /><br />
+              </div>
+              <div class="form_div" id="street">
+                <label for="street_address" class="fs_fifteen"
+                  >Street Address <a href="#" class="asterisk">*</a></label
+                ><br />
+                <input
+                  type="text"
+                  placeholder="House number and street name"
+                  class="form_input fs_fourteen"
+                />
+              </div>
+              <div class="form_div" id="street_appartment">
+                <label for="street_address"></label><br />
+                <input
+                  type="text"
+                  placeholder="Appartment, suite, unit, etc. (optional)"
+                  class="form_input fs_fourteen"
+                />
+              </div>
+              <div class="form_div" id="state">
+                <label for="state" class="fs_fifteen"
+                  >State <a href="#" class="asterisk">*</a></label
+                ><br />
+                <select class="form_select">
+                  <option value="" class="fs_fourteen">
+                    Select a state
+                  </option></select
+                ><br />
+              </div>
+              <div class="form_div" id="zip">
+                <label for="zip" class="fs_fifteen"
+                  >Zip <a href="#" class="asterisk">*</a></label
+                ><br />
+                <input type="text" class="form_input" /><br />
+              </div>
+              <div class="form_div" id="email">
+                <label for="email" class="fs_fifteen"
+                  >Email address <a href="#" class="asterisk">*</a></label
+                ><br />
+                <input type="email" class="form_input" /><br />
+              </div>
+              <div class="form_div" id="phone">
+                <label for="phoneNumber" class="fs_fifteen"
+                  >Phone Number <a href="#" class="asterisk">*</a></label
+                ><br />
+                <select class="phone_number">
+                  <option value="" class="fs_fifteen">
+                    <p class="fs_fifteen">+966</p>
+                  </option></select
+                ><br />
+              </div>
+              <div class="form_div" id="checkbox">
+                <input type="checkbox" class="custom-checkbox" />
+                <label for="checkbox" class="medium_paragraph fs_fifteen"
+                  >Ship to a different address?</label
+                >
+              </div>
+              <div class="form_div" id="order_notes">
+                <label for="orderNotes" class="fs_fifteen"
+                  >Order notes (optional)</label
+                ><br />
+                <textarea rows="10" cols="45"></textarea>
+              </div>
+            </div>
+          </div>
+          <!-- йор ордер -->
+          <div class="your_order">
+            <p class="bold_paragraph fs_seventeen">Your Order</p>
+            <div class="products_and_subtotal">
+              <p class="medium_paragraph fs_sixteen">Products</p>
+              <p class="medium_paragraph fs_sixteen">Subtotal</p>
+            </div>
+            <!-- заказ 1 -->
+            <div class="ordered_product">
+              <img
+                class="plant_img"
+                src="./assets/order/image 11 (1).png"
+                alt="Barberton Daisy"
+              />
+              <div class="flex_cont_order">
+                <div class="pr_name_sku">
+                  <p class="medium_paragraph fs_sixteen">Barberton Daisy</p>
+                  <p class="sku fs_fourteen">
+                    <span class="span_sku">SKU:</span> 1995751877966
+                  </p>
+                </div>
+                <div class="center">
+                  <p class="number_of_products fs_fourteen">(x 2)</p>
+                </div>
+                <div class="center">
+                  <p class="bold_paragraph price fs_eighteen">$238.00</p>
+                </div>
+              </div>
+            </div>
+            <!-- заказ 2 -->
+            <div class="ordered_product">
+              <img
+                class="plant_img"
+                src="./assets/order/image 15.png"
+                alt="Blushing Bromeliad"
+              />
+              <div class="flex_cont_order">
+                <div class="pr_name_sku">
+                  <p class="medium_paragraph fs_sixteen">Blushing Bromeliad</p>
+                  <p class="sku fs_fourteen">
+                    <span class="span_sku">SKU:</span> 19957518757065
+                  </p>
+                </div>
+                <div class="center">
+                  <p class="number_of_products fs_fourteen">(x 6)</p>
+                </div>
+                <div class="center">
+                  <p class="bold_paragraph price fs_eighteen">$834.00</p>
+                </div>
+              </div>
+            </div>
+            <!-- заказ 3 -->
+            <div class="ordered_product">
+              <img
+                class="plant_img"
+                src="./assets/order/image 16.png"
+                alt="Aluminum Plant"
+              />
+              <div class="flex_cont_order">
+                <div class="pr_name_sku">
+                  <p class="medium_paragraph fs_sixteen">Aluminum Plant</p>
+                  <p class="sku fs_fourteen">
+                    <span class="span_sku">SKU:</span> 1995751877786
+                  </p>
+                </div>
+                <div class="center">
+                  <p class="number_of_products fs_fourteen">(x 9)</p>
+                </div>
+                <div class="center">
+                  <p class="bold_paragraph price fs_eighteen">$1,611.00</p>
+                </div>
+              </div>
+            </div>
+            <!-- средний раздел йор ордера -->
+            <div class="total_container">
+              <p class="fs_fourteen">
+                Have a coupon code? <a class="link" href="#">Click here</a>
+              </p>
+              <div class="total_subcontainer">
+                <p class="fs_fifteen">Subtotal</p>
+                <p class="bold_paragraph fs_eighteen">$2,683.00</p>
+              </div>
+              <div class="total_subcontainer">
+                <p class="fs_fifteen">Coupon Discount</p>
+                <p class="fs_fifteen">(-) 00.00</p>
+              </div>
+              <div class="total_subcontainer">
+                <p class="fs_fifteen">Shiping</p>
+                <p class="bold_paragraph fs_eighteen">$16.00</p>
+              </div>
+              <a class="link shipping_charge fs_twelve" href="#"
+                >View shipping charge</a
+              >
+              <div class="total_subcontainer total">
+                <p class="bold_paragraph fs_sixteen">Total</p>
+                <p class="bold_paragraph total_price fs_eighteen">$2,699.00</p>
+              </div>
+              <!-- метод оплаты -->
+              <div class="payment_method">
+                <p class="bold_paragraph pm_heading fs_seventeen">
+                  Payment Method
+                </p>
+                <div class="radio_container">
+                  <div class="img_input">
+                    <input
+                      class="custom-radio"
+                      type="radio"
+                      name="payment_method"
+                    />
+                    <label for=""></label>
+                    <img
+                      class="payment_img"
+                      src="./assets/icons/image 16.png"
+                      alt="choosing a bank card"
+                    />
+                  </div>
+                  <div>
+                    <input
+                      class="custom-radio"
+                      type="radio"
+                      name="payment_method"
+                    />
+                    <label for="bank_transfer" class="fs_fifteen"
+                      >Dorect bank transfer</label
+                    >
+                  </div>
+                  <div>
+                    <input
+                      class="custom-radio"
+                      type="radio"
+                      name="payment_method"
+                    />
+                    <label for="cash_on_delivery" class="fs_fifteen"
+                      >Cash on delivery</label
+                    >
+                  </div>
+                </div>
+                <button class="bold_paragraph place_order_button fs_fifteen">
+                  Place Order
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
