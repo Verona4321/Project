@@ -12,7 +12,9 @@
     src: url("assets/fonts/cera-pro/CeraPro-Medium.woff2");
     font-family: 'CeraPro-Medium';
 }
-
+a {   
+    text-decoration: none;
+}
 
 html {
     box-sizing: border-box;
@@ -24,9 +26,53 @@ html {
     color: inherit;
 }
 
-.main__container {
+.wrapper {
     max-width: 1199px;
     margin: 0 auto;
+}
+
+.header__container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: inherit;
+position: relative;
+height: 78px;
+border-bottom: 1px solid rgba(70, 163, 88, 0.3);
+}
+
+.header__menu, .header__menu * {
+    height: 100%;
+    display: flex;
+}
+
+.header__menu-list {
+    justify-content: space-between; 
+    list-style-type: none;
+    list-style-position: inside; 
+    gap: 50px;
+    padding-left: 0;
+    margin: 0;
+}
+
+.header__menu-list-item {
+padding-top: 33px;
+}
+
+.header__menu-list-item:hover {
+    border-bottom: 3px solid #46A358;
+}
+
+.header__btn-group {
+    display: flex;
+    justify-content: space-between; 
+    gap: 30px;
+}
+
+.header__login-button {
+    width: 100px;
+    height: 35px;
+    border-radius: 6px;
 }
 
 .main__menu-list {
@@ -38,8 +84,8 @@ html {
     justify-content: space-between; 
 
 }
+
 .main__menu-link {
-    text-decoration: none;
     margin-right: 4px;
 }
 
@@ -108,7 +154,6 @@ html {
 }
 
 .product__quantity-button {
-    display: flex;
     border-radius: 50%;
     width: 22px;
     height: 25px;
@@ -168,6 +213,7 @@ border: none;
 }
 
 .btn {
+display: flex;
 align-items: center;
 justify-content: center;
 background-color: #46A358;
@@ -199,88 +245,135 @@ border-radius: 3px;
     justify-content: center;
 }
 
-.slider__container {
+
+
+.slider {
     margin-top: 70px;
 }
+
+.slider__container {
+        display: flex;
+        max-width: 300%;
+        height: 100%;
+        display: flex;
+        width: 100%;
+        height: 368px;
+        overflow: hidden;
+        margin: 0 auto;
+}
+
 .slider__title {
-width: 100%;
-border-bottom: 1px solid rgba(70, 163, 88, 0.3);
-}
-
-.slider__inner {
-    margin-top: 44px;
     width: 100%;
-    height: 368px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: 1fr 60px;
-    gap: 26px;
-}
+    border-bottom: 1px solid rgba(70, 163, 88, 0.3);
+    }
 
-.slider__item-img {
-    width: 100%;
-    height: 255px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #FBFBFB;
-    transition: box-shadow 0.3s;
-}
+    .slider__item-img {
+        width: 100%;
+        height: 255px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FBFBFB;
+        transition: box-shadow 0.3s;
+    }
+    
+    .slider__item-img:hover {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); 
+    }
+    
+    .slider__item-name{
+        margin-top: 12px;
+    }
+    
 
-.slider__item-img:hover {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); 
-}
+    
+    .slider__inner {
+        margin: 0;
+        height: 368px;
+        display: flex;
+        gap: 26px;
+        padding: 26px;
+        width: 1200px;
+        transition: all 0.3s ease;
+    }
+    
+    .slider__item-img {
+        width: 100%;
+        height: 255px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FBFBFB;
+        transition: box-shadow 0.3s;
+    }
+    
+    .slider__item-img:hover {
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5); 
+    }
+    
+    .slider__item-name{
+        margin-top: 12px;
+    }
+    
+    .slider__navigation {
+        height: 40px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    .slider__buttons-input  {
+        width: 1px;
+        height: 1px;
+        opacity: 0;
+        z-index: -1;
+    }
+    
+    #r1:checked ~ .s1 {
+        margin-left: 0;
+    }
+    
+    #r2:checked ~ .s1 {
+        margin-left: -100%;
+    }
+    
+    #r3:checked ~ .s1 {
+        margin-left: -200%;
+    }
+    
+    .slider__buttons-design {
+        width: 13px;
+        height: 13px;
+        margin: 9px;
+        border-radius: 10px;
+        background-color: #46A358;
+    
+    }
+    
+    .slider__buttons-design::before {
+        content: '';
+        display: inline-block;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        border: 2px solid #46A358;
+        background: white;
+        transform: scale(1.1);
+        transition: .3s;
+    }
+    
+    .slider__buttons-design:hover {
+        transform:scale(1.1);
+    }
+    
 
-.slider__item-name{
-    margin-top: 12px;
-}
-
-.slider__buttons {
-    grid-column-start: 1;
-    grid-column-end: 6;
-    margin-top: 40px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.slider__buttons-input {
-    width: 1px;
-    height: 1px;
-    opacity: 0;
-    z-index: -1;
-}
-
-.slider__buttons-design {
-    width: 13px;
-    height: 13px;
-    margin: 9px;
-    border-radius: 100px;
-    background: #46A358;
-}
-
-.slider__buttons-design::before {
-    content: '';
-    display: inline-block;
-    width: inherit;
-    height: inherit;
-    border-radius: inherit;
-    border: 2px solid #46A358;
-    background: white;
-    transform: scale(1.1);
-    transition: .3s;
-}
-
-.slider__buttons-input:checked+.slider__buttons-design::before {
-    transform: scale(0);
-}
 
 
 .cart__list > div {
     background-color: #FBFBFB;
 }
 
-.product__total-price, .totals__total-item-value, .totals__continue-link, .totals__shipping-cost-link, .slider__title, .slider__item-price {
+.product__total-price, .totals__total-item-value, .totals__continue-link, .totals__shipping-cost-link, .slider__title, .slider__item-price, .header__menu-list-link:hover {
     color: #46A358;
 }
 
@@ -288,9 +381,6 @@ border-bottom: 1px solid rgba(70, 163, 88, 0.3);
     content: '$';
 }
 
-.totals__shipping-cost-link, .totals__continue-link {
-    text-decoration: none;
-}
 
 .totals__shipping-cost-link:hover, .totals__continue-link:hover {
     font-family: "CeraPro-Medium", "Arial", sans-serif;
@@ -302,11 +392,11 @@ border-bottom: 1px solid rgba(70, 163, 88, 0.3);
     font-size: 15px;
 }
 
-.main__menu-link:hover {
+.main__menu-link:hover, .header__menu-list-link:hover {
     font-family: "CeraPro-Bold", "Arial", sans-serif;
 }
 
-.cart__list-title, .product__name, .product__single-price {
+.cart__list-title, .product__name, .product__single-price, .header__login-button {
     font-family: "CeraPro-Medium", "Arial", sans-serif;
     font-size: 16px;
 }
@@ -354,4 +444,9 @@ border-bottom: 1px solid rgba(70, 163, 88, 0.3);
 .slider__title {
     font-family: "CeraPro-Bold", "Arial", sans-serif;
     font-size: 17px;
+}
+
+.header__menu-list-link {
+    font-family: "CeraPro-Regular", "Arial", sans-serif;
+    font-size: 16px;
 }
