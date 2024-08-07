@@ -1,3 +1,5 @@
+@import url("style-shopping-cart.css");
+
 @font-face {
     src: url(./assets/fonts/cera-pro/CeraPro-Regular.ttf);
     font-family: 'CeraPro';
@@ -14,8 +16,14 @@
 }
 
 body {
-    width: 90vw;
+    width: 90%;
     margin: 0 auto;
+    /* max-width: 1199px;
+    margin: 0 auto;  */
+}
+
+main {
+    margin-top: 40px;
 }
 
 p{
@@ -70,8 +78,8 @@ label {
 }
 
 .phone_number {
-    /* width: 75px; */
-    width: 20%;
+    width: 75px;
+    /* width: 20%; */
     height: 45px;
     color: #3D3D3D;
     border-color: #EAEAEA;
@@ -370,5 +378,82 @@ textarea {
     .custom-radio+label::before {
         width: 10px;
         height: 10px;
+    }
+}
+
+@media (min-width: 1800px) {
+    body {
+        max-width: 1199px;
+    }
+}
+
+/* адаптирую для размеров меньше 800  */
+
+@media screen and (max-width: 800px) {
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .subcontainer {
+        flex-direction: column;
+        /* display: grid;
+        grid-template-rows: 1fr 1fr; */
+        gap: 200px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .your_order {
+        width: 100%;
+    }
+    
+    .billing_address {
+        width: 100%;
+    }
+
+    .products_and_subtotal {
+        width: 100%;
+    }
+
+    .ordered_product {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .flex_cont_order {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .total_container {
+        width: 100%;
+        align-items: center;
+    }
+
+    .fs_fifteen {
+        font-size: 15px;
+    }
+    
+    .fs_seventeen {
+        font-size: 17px;
+    }
+    
+    .fs_fourteen {
+        font-size: 14px;
+    }
+    
+    .fs_sixteen {
+        font-size: 16px;
+    }
+    
+    .fs_eighteen {
+        font-size: 18px;
+    }
+    
+    .fs_twelve {
+        font-size: 12px;
     }
 }
