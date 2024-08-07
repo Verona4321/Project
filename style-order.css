@@ -389,7 +389,7 @@ textarea {
 
 /* адаптирую для размеров меньше 800  */
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
 
     .container {
         display: flex;
@@ -431,6 +431,10 @@ textarea {
     .total_container {
         width: 100%;
         align-items: center;
+    }
+
+    .payment_img {
+        width: 40%;
     }
 
     .fs_fifteen {
