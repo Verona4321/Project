@@ -103,7 +103,7 @@ body {
     font-size: 16px;
 }
 
-.product__total-price, .totals__total-item-value, .totals__continue-link, .totals__shipping-cost-link, .slider__title, .slider__item-price, .header__menu-list-link:hover {
+.header__menu-list-link:hover {
     color: #46A358;
 }
 
@@ -115,7 +115,7 @@ body {
     font-family: "CeraPro-Bold", "Arial", sans-serif;
 }
 
-.cart__list-title, .product__name, .product__single-price, .header__login-button {
+.header__login-button {
     font-family: "CeraPro-Medium", "Arial", sans-serif;
     font-size: 16px;
 }
@@ -149,9 +149,13 @@ body {
 }
 
 .big_welcome {
-    font-size: 70px;
+    font-size: 4vw;
     font-weight: 800;
     margin: 0;
+}
+
+.welcome__big-img > img {
+    width: 100%;
 }
 
 .welcome__btn {
@@ -187,10 +191,17 @@ aside p {
     margin-left: 30px;
 }
 
+.aside__a:hover {
+    color: #46A358;
+}
+
+.range_img > img {width: 100%;}
+
 button {
     font-family: 'Cera Pro';
     color: #ffffff;
     background: #46A358;
+    border: #46A358;
 }
 
 aside button {
@@ -198,6 +209,15 @@ aside button {
     border-radius: 6px;
     width: 90px;
     height: 35px;
+    font-weight: 600;
+}
+
+/*.aside__banner {
+    width: 25%;
+}*/
+
+.aside__banner img {
+    width: 100%;
 }
 
 nav {
@@ -264,10 +284,24 @@ h1 {
     margin-top: 30px;
 }
 
+.item p {
+    margin-top: 0px;
+}
+
+.price {margin-top: 0px;}
+
 .item_img {
     background-color: #FBFBFB;
     height: 300px;
     width: 258px;
+}
+
+.item__a {
+    margin-top: 5px;
+}
+
+.item__a:hover {
+    color: #46A358;
 }
 
 .pages {
@@ -334,7 +368,7 @@ h1 {
     font-weight: 600;
 }
 
-.posts {
+.blog__posts {
     display: flex;
     flex-wrap: wrap;
     font-family: 'Cera Pro';
@@ -344,13 +378,21 @@ h1 {
     margin-top: 20px;
 }
 
-.posts__h1 {
+.blog > h1 {
     text-align: center;
 }
 
 .posts p {
     font-size: 14px;
 }
+
+.post {
+    display: block;
+    width: 268px;
+    background-color: #FBFBFB;
+    text-align: left;
+    margin-bottom: 25px;
+} 
 
 .find_more {
     display: flex;
@@ -367,6 +409,8 @@ h1 {
     font-family: 'Cera Pro';
     color: #3D3D3D;
 }
+
+.blog__more > a:hover {color: #46A358;}
 
 .find_more__info {
     display: grid;
@@ -411,12 +455,6 @@ font-size: 22px;
     padding-right: 40px;
 }
 
-.post1, .post2, .post3, .post4 {
-    display: block;
-    width: 268px;
-    background-color: #FBFBFB;
-    text-align: left;
-} 
 
 .read {
     padding: 0px 12px 12px 12px;
@@ -610,6 +648,52 @@ body {
 
 
 @media (max-width: 900px) {
+
+.welcome_text {
+    width: 65%;
+    padding: 80px 50px 80px 50px;
+}
+
+/*.big_welcome {
+    font-size: 55px;
+    font-weight: 800;
+    margin: 0;
+}*/
+
+.welcome__big-img {
+    display: flex;
+    align-items: center;
+
+}
+
+.welcome__big-img > img {
+    width: 100%;
+}
+
+aside > h1 {
+    font-size: 24px;
+}
+
+.items {
+    justify-content: space-around;
+}
+
+.item {
+    width: 158px;
+    /*height: 200px;*/
+    margin-top: 30px;
+}
+
+.item_img img {width: 150px;}
+
+.item_img {
+    background-color: #FBFBFB;
+    width: 158px;
+    height: 200px;
+}
+
+.blog__posts {
+    margin-bottom: 50px}
 
 footer {
     grid-template-columns: 1fr 1fr 1fr;
