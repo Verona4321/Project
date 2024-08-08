@@ -1,4 +1,6 @@
-@import url("style-shopping-cart.css");
+@import url("./style-shopping-cart.css");
+
+/* @import url("./style-index\ —\ копия.css"); */
 
 @font-face {
     src: url(./assets/fonts/cera-pro/CeraPro-Regular.ttf);
@@ -347,37 +349,31 @@ textarea {
 
 @media screen and (max-width: 1050px) {
     .fs_fifteen {
-        font-size: 0.7em;
-    }
-    
-    .fs_seventeen {
         font-size: 0.8em;
     }
     
-    .fs_fourteen {
-        font-size: 0.6em;
-    }
-    
-    .fs_sixteen {
-        font-size: 0.7em;
-    }
-    
-    .fs_eighteen {
+    .fs_seventeen {
         font-size: 0.9em;
     }
     
+    .fs_fourteen {
+        font-size: 0.7em;
+    }
+    
+    .fs_sixteen {
+        font-size: 0.9em;
+    }
+    
+    .fs_eighteen {
+        font-size: 1em;
+    }
+    
     .fs_twelve {
-        font-size: 0.5em;
+        font-size: 0.6em;
     }
-
-    .custom-checkbox+label::before {
-        width: 10px;
-        height: 10px;
-    }
-
-    .custom-radio+label::before {
-        width: 10px;
-        height: 10px;
+    
+    .path {
+        font-size: 1em;
     }
 }
 
