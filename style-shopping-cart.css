@@ -1,4 +1,4 @@
-/* @import "style-index.css"; */
+/*@import "style-index.css"; */
 
 
 @font-face {
@@ -240,9 +240,6 @@ align-items: center;
     justify-content: space-between;
 }
 
-.totals__coupon-form {
-
-}
 
 .totals__coupon-form-input{
 border: none;
