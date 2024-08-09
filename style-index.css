@@ -53,7 +53,7 @@ body {
 }
 
 .header__menu, .header__menu * {
-    height: 106%;
+    height: 100%;
     display: flex;
 }
 
@@ -436,6 +436,8 @@ a {
     font-weight: 400;
     /*display: block;*/
 }
+
+.aside__a {display: block;}
 
 h2 {
     /*margin-bottom: 10px;*/
