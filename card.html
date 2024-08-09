@@ -7,29 +7,38 @@
     <link rel="stylesheet" href="style-card.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header__logo">
-            <img src="assets/logo.png" alt="Logo" class="header__logo-image">
-        </div>
-        <nav class="header__nav">
-            <a href="#" class="header__nav-link">Home</a>
-            <a href="shop.html" class="header__nav-link header__nav-link--active">Shop</a>
-            <a href="#" class="header__nav-link">Plant Care</a>
-            <a href="#" class="header__nav-link">Blogs</a>
-        </nav>
-        <div class="header__login-cart">
-            <div class="header__search">
-                <img src="assets/icons/magnifier.png" alt="Search" class="header__search-image">
+    <div class= "wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__logo">
+                    <img src="assets/shopping-cart/Logo.svg" alt="Logo" class="header__logo-image">
+                </div>
+                <nav class="header__menu">
+                    <ul class="header__menu-list">
+                        <li class="header__menu-list-item"><a class="header__menu-list-link" href="index.html">Home</a></li>
+                        <li class="header__menu-list-item"><a class="header__menu-list-link" href="shopping-cart.html">Shopping Cart</a></li>
+                        <li class="header__menu-list-item"><a class="header__menu-list-link" href="order.html">Order</a></li>
+                        <li class="header__menu-list-item"><a class="header__menu-list-link" href="post.html">Blogs</a></li>
+                    </ul>
+                </nav>
+                <div class="header__btn-group">
+                    <a class="header__search">
+                        <img src="assets/icons/search.svg" alt="Search" class="header__search-image">
+                    </a>
+                    <a class="header__cart">
+                        <img src="assets/icons/header-basket.svg" alt="Cart" class="header__cart-image">
+                    </a>
+                    <button class="header__login-button btn">
+                        <img src="assets/icons/Logout.svg" alt="Login" class="header__login-icon">
+                        Login
+                    </button>
+                </div>
             </div>
-            <div class="header__cart">
-                <img src="assets/icons/shopping-cart.png" alt="Cart" class="header__cart-image">
+            <div class="header__mob">
+                <button class="header__mob-button"><img src="assets/icons/Arrow_Left.svg" alt="back"></button>
+                <h4 class="header__mob-title">Cart</h4>
             </div>
-            <button class="header__login-button">
-                <img src="assets/icons/login.png" alt="Login Icon" class="header__login-icon">
-                Login
-            </button>
-        </div>
-    </header>
+        </header>
     <div class="breadcrumbs">
         <p>Home / Shop</p>
     </div>
