@@ -1,3 +1,5 @@
+@import url("style-shopping-cart.css");
+
 @font-face {
     font-family: 'CeraPro-medium';
     src: url('assets/fonts/cera-pro/CeraPro-Medium.woff') format('woff2');
@@ -17,10 +19,22 @@
     font-weight: normal;
     font-style: normal;
 }
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    max-width: 1199px;
+    margin: 0 auto; 
     padding: 0;
+}
+
+.header__nav-link:hover {
+    color: #46A358; /* Зеленый цвет текста при наведении */
+    text-decoration: none;
+}
+
+/* Фиксация положения зеленой линии */
+.header__menu, .header__menu * {
+    height: 80%;
 }
 
 .header {
@@ -68,6 +82,7 @@ body {
     margin-left: 60px;
     font-family: 'CeraPro-Medium', Arial, sans-serif; 
 }
+
 .header__nav-link {
     color: rgb(36, 36, 36);
     text-decoration: none;
@@ -469,14 +484,38 @@ body {
     opacity: 1;
 }
 
+.buy-now:hover,
+.add-to-cart:hover,
+.wishlist:hover,
+.email__button:hover {
+    background-color: #34A049; /* Более темный зеленый цвет при наведении */
+    color: #fff; /* Белый текст при наведении */
+}
+
+.add-to-cart:hover {
+    background-color: #34A049; /* Более темный зеленый цвет для бордюра при наведении */
+    color: #fff; /* Белый текст при наведении */
+}
+
 /* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     .related-product {
         flex: 1 1 calc(50% - 20px); /* Две карточки в ряд на планшетах */
     }
+    
+    .header__logo-image {
+        height: 35px; /* Немного уменьшаем высоту на средних экранах */
+        width: auto; /* Сохраняем пропорции изображения */
+    }
 }
 
 @media (max-width: 480px) {
+
+    .header__logo-image {
+        height: 30px; /* Еще меньше для малых экранов */
+        width: auto; /* Сохраняем пропорции изображения */
+    }
+
     .header {
         display: flex;
         justify-content: space-between;
@@ -794,17 +833,20 @@ body {
         cursor: pointer;
     }
 }
+
 /* Далее всё относится к футеру */
 
 footer {
     background-color: #FBFBFB;
-    padding: 20px 60px;
+    max-width: 1199px; /* Устанавливаем максимальную ширину такую же, как у body */
+    margin: 0 auto; /* Центрируем футер */
+    padding: 20px 0; /* Убираем боковые отступы */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1.8fr;
     grid-template-rows: 2.5fr 1fr 2.5fr;
-    font-family: 'Cera Pro';
     font-size: 14px;
     color: rgba(61, 61, 61, 1);
+    font-family: 'CeraPro-Medium', Arial, sans-serif;
 }
 
 .flovers_1 {
@@ -894,7 +936,7 @@ h2 {
     align-items: center;
     color: #3D3D3D;
     border-top: 1.5px solid #85c192b9;
-    border-bottom: 1.5px solid #85c192b9;
+    border-bottom: 1.5px солидный #85c192b9;
 }
 
 .logo img {
@@ -945,4 +987,56 @@ h2 {
     grid-row: 3 / 4;
     grid-column: 4 / 5;
     margin-top: 30px;
+}
+/* Адаптация для больших экранов */
+@media (min-width: 1200px) {
+    .header__logo-image {
+        height: 42px; /* Увеличенная высота для больших экранов */
+        width: auto; /* Сохраняем пропорции изображения */
+        max-width: none; /* Отменяем ограничение максимальной ширины */
+    }
+}
+@media (max-width: 900px) {
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        height: 960px;
+    }
+    
+    .footer__subscribe {
+        grid-column: 1 / 4;
+        grid-row: 2 / 3;
+        /*width: 100%;*/
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+    
+    .footer__contacts {
+        grid-row: 3 / 4;
+        grid-column: 1 / 4;
+        display: flex;
+        flex-wrap: wrap;
+        height: 80px;
+        justify-content: space-around;
+    }
+    
+    .footer__myaccount {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+    
+    .footer__help {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+    
+    .footer__categories {
+        grid-row: 4 / 5;
+        grid-column: 3 / 4;
+    }
+    
+    .footer__social {
+        grid-row: 5 / 6;
+        grid-column: 1 / 3;
+    }
 }

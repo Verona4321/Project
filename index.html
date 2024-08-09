@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/normalize.css" />
     <link rel="stylesheet" href="style-index.css">
     <title>Main</title>
 </head>
@@ -18,7 +19,7 @@
                     <li class="header__menu-list-item"><a class="header__menu-list-link" href="index.html">Home</a></li>
                     <li class="header__menu-list-item"><a class="header__menu-list-link" href="shopping-cart.html">Shopping Cart</a></li>
                     <li class="header__menu-list-item"><a class="header__menu-list-link" href="order.html">Order</a></li>
-                    <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">Blogs</a></li>
+                    <li class="header__menu-list-item"><a class="header__menu-list-link" href="index.html#blog">Blogs</a></li>
                 </ul>
             </nav>
             <div class="header__btn-group">
@@ -35,39 +36,29 @@
             </div>
         </div>
     </header>
-    <!--
-    <header class="header">
-        <div class="header__logo">
-            <img src="assets/logo.png" alt="Logo" class="header__logo-image">
-        </div>
-        <nav class="header__nav">
-            <a href="#" class="header__nav-link">Home</a>
-            <a href="shop.html" class="header__nav-link header__nav-link--active">Shop</a>
-            <a href="#" class="header__nav-link">Plant Care</a>
-            <a href="#" class="header__nav-link">Blogs</a>
-        </nav>
-        <div class="header__login-cart">
-            <div class="header__search">
-                <img src="assets/icons/magnifier.png" alt="Search" class="header__search-image">
-            </div>
-            <div class="header__cart">
-                <img src="assets/icons/shopping-cart.png" alt="Cart" class="header__cart-image">
-            </div>
-            <button class="header__login-button">
-                <img src="assets/icons/login.png" alt="Login Icon" class="header__login-icon">
-                Login
-            </button>
-        </div>
-    </header>
--->
+    
     <main>
+    <form action="" class="form_mobile">
+        <input type="text" class="form_mobile__input" value="Find your plants">
+    </form>
+    <section class="welcome_mobile">
+        <div class="welcome_mobile__text">
+            <h2>WELCOME TO GREENSHOP</h2>
+            <p class="mobile__big_welcome">LET’S MAKE A BETTER <span style="color: #46A358;">PLANET</span></p>
+            <p>We are an online plant shop offering a wide range</p>
+        </div>
+        <div class="welcome_mobile__img">
+            <img src="assets/index/01_small.svg" alt="">
+        </div>
+    </section>
+
     <section class="welcome">
         <div class="welcome_text">
             <h2>WELCOME TO GREENSHOP</h2>
             <p class="big_welcome">LET’S MAKE A BETTER <span style="color: #46A358;">PLANET</span></p>
             <p>We are an online plant shop offering a wide range of cheap and trendy plants. 
                 Use our plants to create an unique Urban Jungle. Order your favorite plants!</p>
-                <button class="welcome__btn">SHOP NOW</button>
+                <form action="#nav_items"><button class="welcome__btn">SHOP NOW</button></form>
         </div>
         <div class="welcome__big-img">
             <img src="assets/index/01_1_1.svg" alt="">
@@ -110,79 +101,79 @@
         </div>
     </section>
 
-    <section class="items">
+    <section id="items">
         <div class="item">
             <div class="item_img">
-            <img src="assets/index/without-background/image 1.png" alt="">
+            <a href="card.html"><img src="assets/index/without-background/image 1.png" alt=""></a>
             </div>
-            <a href="card.html" class="item__a">Barberton Daisy</a>
-            <p class="price">$119.00</p>
+            <div><a href="card.html" class="item__a">Barberton Daisy</a></div>
+            <div><p class="price">119.00</p></div>
             <!--<a href="" class="price item__a">$119.00</a>-->
         </div>
         <div class="item">
             <div class="item_img">
-            <img src="assets/index/without-background/2.png" alt="">
+            <a href="card.html"><img src="assets/index/without-background/2.png" alt=""></a>
             </div>
             <a href="card.html" class="item__a">Angel Wing Begonia</a>
-            <p class="price">$169.00</p>
+            <p class="price">169.00</p>
             <a href=""></a>
         </div>
         <div class="item">
             <div class="item_img">
-            <img src="assets/index/without-background/3.png" alt="">
+            <a href="card.html"><img src="assets/index/without-background/3.png" alt=""></a>
             </div>
             <a href="card.html" class="item__a">African Violet</a>
-            <p class="price">$199.00</p>
+            <p class="price">199.00</p>
         </div>
         <div class="item">
             <div class="item_img">
-            <img src="assets/index/without-background/4.png" alt="">
+            <a href="card.html"><img src="assets/index/without-background/4.png" alt=""></a>
             </div>
             <a href="card.html" class="item__a">Beach Spider Lily</a>
-            <p class="price">$129.00</p>
+            <p class="price">129.00</p>
         </div>
         <div class="item">
             <div class="item_img">
-            <img src="assets/index/without-background/5.png" alt="">
+            <a href="card.html"><img src="assets/index/without-background/5.png" alt=""></a>
             </div>
             <a href="card.html" class="item__a">Blushing Bromeliad</a>
-            <p class="price">$139.00</p>
+            <p class="price">139.00</p>
         </div>
         <div class="item">
             <div class="item_img">
-            <img src="assets/index/without-background/6.png" alt="">
+            <a href="card.html"><img src="assets/index/without-background/6.png" alt=""></a>
             </div>
             <a href="card.html" class="item__a">Aluminum Plant</a>
-            <p class="price">$179.00</p>
+            <p class="price">179.00</p>
         </div>
         <div class="item">
             <div class="item_img">
-            <img src="assets/index/without-background/7.png" alt="">
+            <a href="card.html"><img src="assets/index/without-background/7.png" alt=""></a>
             </div>
             <a href="card.html" class="item__a">Bird's Nest Fern</a>
-            <p class="price">$99.00</p>
+            <p class="price">99.00</p>
         </div>
         <div class="item">
             <div class="item_img">
-            <img src="assets/index/without-background/8.png" alt="">
+            <a href="card.html"><img src="assets/index/without-background/8.png" alt=""></a>
             </div>
             <a href="card.html" class="item__a">Broadleaf Lady Palm</a>
-            <p class="price">$59.00</p>
+            <p class="price">59.00</p>
         </div>
         <div class="item">
             <div class="item_img">
-            <img src="assets/index/without-background/9.png" alt="">
+            <a href="card.html"><img src="assets/index/without-background/9.png" alt=""></a>
             </div>
             <a href="card.html" class="item__a">Chinese Evergreen</a>
-            <p class="price">$39.00</p>
+            <p class="price">39.00</p>
         </div>
     </section>
     <section class="pages">
         <div id="green_square"><a href="">1</a></div>
-        <div  id="square"><a href="">2</a></div>
-        <div  id="square"><a href="">3</a></div>
-        <div  id="square"><a href="">4</a></div>
-        <div  id="square"><a href=""><img src="assets/icons/Arrow - Right 2.png" alt=""></a></div>
+        <div  class="square"><a href="">2</a></div>
+        <div  class="square"><a href="">3</a></div>
+        <div  class="square"><a href="">4</a></div>
+        <div  class="square"><a href=""><img src="assets/icons/Arrow - Right 2.png" alt=""></a></div>
     </section>
     <section class="find_more">
         <article class="find_more__info">
@@ -204,12 +195,12 @@
             </div>
         </article>
     </section>
-    <section class="blog">
+    <section id="blog">
         <h1>Our Blog Posts</h1>
         <p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
         <div class="blog__posts">
             <div class="post">
-                <img src="assets/index/01_1.svg" alt="">
+                <a href="" class="post__link"><img src="assets/index/01_1.svg" alt=""></a>
                 <div class="read">
                 <p class="green_text">September 12 | Read in 6 minutes</p>
                 <h2>Cactus & Succulent Care Tips</h2>
@@ -220,7 +211,7 @@
                 </div>
             </div>
             <div class="post">
-                <img src="assets/index/02_1.svg" alt="">
+                <a href="" class="post__link"><img src="assets/index/02_1.svg" alt=""></a>
                 <div class="read">
                 <p class="green_text"t>September 13 | Read in 2 minutes</p>
                 <h2>Top 10 Succulents for Your Home</h2>
@@ -231,7 +222,7 @@
                 </div>
             </div>
             <div class="post">
-                <img src="assets/index/03_1.svg" alt="">
+                <a href="" class="post__link"><img src="assets/index/03_1.svg" alt=""></a>
                 <div class="read">
                 <p class="green_text">September 15 | Read in 3 minutes</p>
                 <h2>Cactus & Succulent Care Tips</h2>
@@ -242,7 +233,7 @@
                 </div>
             </div>
             <div class="post">
-                <img src="assets/index/04_1.svg" alt="">
+                <a href="" class="post__link"><img src="assets/index/04_1.svg" alt=""></a>
                 <div class="read">
                 <p class="green_text">September 15 | Read in 2 minutes</p>
                 <h2>Best Houseplants Room by Room</h2>
@@ -332,11 +323,13 @@
         </div>
         <div class="footer__social">
             <h2>Social Media</h2>
+            <div>
             <img src="assets/icons/Facebook1.png" alt="">
             <img src="assets/icons/Instagram2.png" alt="">
             <img src="assets/icons/Twitter1.png" alt="">
             <img src="assets/icons/Linkedin1.png" alt="">
             <img src="assets/icons/Union1.png" alt="">
+            </div>
             <h2>We accept</h2>
             <img src="assets/icons/image 16.png" alt="">
         </div>
