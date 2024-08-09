@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style-checkout.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <a href="assets/checkout/back_button.svg"></a>
+      <p id="title">Checkout</p>
+        <div class="shipping">
+          <p class="subtitle">Shipping to</p>
+          <a href="" id="link_add-address">Add Address</a>
+        </div>
+      <div class="address_option">
+        <input type="radio" name="address" />
+        <p>
+          <span class="subtitle">Home</span><br />
+          <span class="text"> 100 Jericho avenue, Westbury, NY 11590, USA</span>
+        </p>
+        <img src="assets/checkout/dots.svg" class="more"/>
+      </div>
+      <div class="address_option">
+        <input type="radio" name="address" />
+        <p>
+          <span class="subtitle">Office</span><br />
+          <span class="text">100 Jericho avenue, Westbury, NY 11590, USA</p>
+        <img src="assets/checkout/dots.svg" class="more"/>
+      </div>
+      <p class="subtitle">Payment Method</p>
+      <div class="payment_method">
+        <img src="assets/checkout/credit-card.svg" alt="credit card option" />
+        <p class="payment_option">Credit Card</p>
+        <input type="radio" name="payment" />
+      </div>
+      <div class="payment_method">
+        <img src="assets/checkout/paypal.svg" alt="paypal option" />
+        <p class="payment_option">Paypal</p>
+        <input type="radio" name="payment" />
+      </div>
+      <div class="payment_method">
+        <img src="assets/checkout/cash.svg" alt="cash option" />
+        <p class="payment_option">Cash on delivery</p>
+        <input type="radio" name="payment" />
+      </div>
+      <div class="total_container">
+      <p> <span id="total">Total:</span>
+      <span id="amount">$908.00</span>
+      </p>
+      </div>
+      <div>
+        <button id="place-order_button">Place Order</button>
+      </div>
+    </div>
+  </body>
+</html>
