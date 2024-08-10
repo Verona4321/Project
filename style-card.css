@@ -154,8 +154,9 @@ body {
 }
 
 .size-option {
-    border: 1px solid #46A358;
-    background: none;
+    border: 1px solid #46A358; /* Зеленая граница */
+    background-color: #46A358; /* Зеленый фон */
+    color: white; /* Белый текст */
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 50%; 
@@ -164,11 +165,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
 }
 
 .size-option:hover,
 .size-option.active {
-    background-color: #46A358;
+    background-color: #34A049; /* Более темный зеленый цвет при наведении */
     color: white;
 }
 
