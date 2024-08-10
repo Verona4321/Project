@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="assets/normalize.css">
     <link rel="stylesheet" href="style-shopping-cart.css">
 </head>
-<body>
-    <div class= "wrapper">
+<body class="body">
+
         <header class="header">
             <div class="header__container">
                 <div class="header__logo">
@@ -17,9 +17,9 @@
                 <nav class="header__menu">
                     <ul class="header__menu-list">
                         <li class="header__menu-list-item"><a class="header__menu-list-link" href="index.html">Home</a></li>
-                        <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">Shop</a></li>
-                        <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">Plant Care</a></li>
-                        <li class="header__menu-list-item"><a class="header__menu-list-link" href="#">Blogs</a></li>
+                        <li class="header__menu-list-item"><a class="header__menu-list-link" href="shopping-cart.html">Shopping Cart</a></li>
+                        <li class="header__menu-list-item"><a class="header__menu-list-link" href="order.html">Order</a></li>
+                        <li class="header__menu-list-item"><a class="header__menu-list-link" href="post.html">Blogs</a></li>
                     </ul>
                 </nav>
                 <div class="header__btn-group">
@@ -58,7 +58,8 @@
                                 <h1 class="cart__list-title">Quantity</h1>
                                 <h1 class="cart__list-title h1__total">Total</h1>
                             </div>
-                            <div class="cart__list-item item-mob">
+                            <div class="cart__list-item item-desk">
+                                <div class="product__img-mob"><img class="product__img-img" src="assets/shopping-cart/image_1_mob.svg" alt=""></div>
                                 <div class="product__img">
                                     <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <g style="mix-blend-mode:multiply">
@@ -99,7 +100,8 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="cart__list-item item-mob">
+                            <div class="cart__list-item item-desk">
+                                <div class="product__img-mob"><img class="product__img-img" src="assets/shopping-cart/image_2_mob.svg" alt=""></div>
                                 <div class="product__img">
                                     <svg width="66" height="66" viewBox="0 0 66 66" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <g style="mix-blend-mode:multiply">
@@ -140,7 +142,8 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="cart__list-item item-mob">
+                            <div class="cart__list-item item-desk">
+                                <div class="product__img-mob"><img class="product__img-img" src="assets/shopping-cart/image_3_mob.svg" alt=""></div>
                                 <div class="product__img">
                                     <svg width="65" height="65" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                         <g style="mix-blend-mode:multiply">
@@ -181,16 +184,16 @@
                                     </button>
                                 </div>
                             </div>
-                            <div class="cart__list-item item-mob">
-                                <div class="product__img desk-invizible">
+                            <div class="cart__list-item desk-invizible">
+                                <div class="product__img-mob">
                                     <img class="product__img-img" src="assets/shopping-cart/image_9.svg" alt="">
                                 </div>
-                                <div class="product__discription desk-invizible">
+                                <div class="product__discription">
                                     <h3 class="product__name">Bird's Nest Fern</h3>
                                     <span class="product__size">Size : M</span>
-                                    <div class="product__single-total-mob price">1,611.00</div>
+                                    <div class="product__total-price-mob price">1,611.00</div>
                                 </div>
-                                <div class="product__quantity desk-invizible">
+                                <div class="product__quantity">
                                     <button class="product__quantity-button">
                                         -
                                     </button>
@@ -200,7 +203,6 @@
                                     </button>
                                 </div>
                             </div>
-
                         </div>
                         <div class="cart__totals totals">
                             <div class="totals-title">Cart Totals</div>
@@ -508,66 +510,57 @@
             </div>
         </main>
         <footer class="footer">
-            <div class="footer__container">
-
-                <div class="footer__section plants_1">
-                    <div class="footer__section-img flovers__img">
-                        <img src="assets/icons/1_3.png" alt=""></div>
-                    <div class="footer__section-info flovers__info">
+            <div class="footer__flovers_1">
+                <div class="footer__flovers-img"><img src="assets/icons/1_3.png" alt=""></div>
+                <div class="footer__flovers-info">
                     <h2>Garden Care</h2>
                     <p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
                 </div>
-            </div>
-        
-            <div class="footer__section plants_2">
-                <div class="footer__section-img flovers__img"><img src="assets/icons/2_1.png" alt=""></div>
-                <div class="footer__section-info flovers__info">
+            </div><div class="footer__vert-line"><img src="assets/icons/vertical_line.png" alt=""></div>
+            <div class="footer__flovers_2">
+                <div class="footer__flovers-img"><img src="assets/icons/2_1.png" alt=""></div>
+                <div class="footer__flovers-info">
                     <h2>Plant Renovation</h2>
                     <p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
                 </div>
-            </div>
-            <div class="footer__section plants_3">
-                <div class="footer__section-img flovers__img"><img src="assets/icons/3_1.png" alt=""></div>
-                <div class="footer__section-info flovers__info">
+            </div><div class="footer__vert-line_1"><img src="assets/icons/vertical_line.png" alt=""></div>
+            <div class="footer__flovers_3">
+                <div class="footer__flovers-img"><img src="assets/icons/3_1.png" alt=""></div>
+                <div class="footer__flovers-info">
                     <h2>Watering Graden</h2>
                     <p>We are an online plant shop offering a wide range of cheap and trendy plants.</p>
                 </div>
             </div>
-
-            <div class="footer__subscribe subscribe">
+            <div class="footer__subscribe">
                 <h2>Would you like to join newsletters?</h2>
                 <div class="footer__email">
-                    <form class="footer__form footer_form" action="">
-                        <input class="footer__email-input send" type="email" id="enter your email address..." name="email" placeholder="enter your email address...">
-                        <button class="footer__email-button email__button" type="button">Join</button>
-                    </form>
+                <form class="footer__form" action="">
+                    <input class="footer__send" type="email" placeholder="enter your email address..." name="email">
+                <button class="footer__email-button" type="button">Join</button>
+                </form>
                 </div>
                 <p>We usually post offers and challenges in newsletter. We’re your online houseplant destination. 
                     We offer a wide range of houseplants and accessories shipped directly from our (green)house to yours!</p>
             </div>
-
-            <div class="footer__contacts contacts">
-                <div class="footer__contacts-logo"><img src="assets/Logo.svg" alt="">
+            <div class="footer__contacts">
+            <div class="logo">
+                <img src="assets/Logo.svg" alt="">
             </div>
-
-            <div class="footer__contacts contact">
-                <div class="footer__contacts-img contact__img"><img src="assets/icons/Location.svg" alt=""></div>
-                <div class="footer__contacts-info contact__info">70 West Buckingham Ave.<br>Farmingdale, NY 11735</div>
+            <div class="footer__contacts-contact">
+                <div class="footer__contacts-contact-img"><img src="assets/icons/Location.png" alt=""></div>
+                <div class="footer__contact-info">70 West Buckingham Ave.<br>Farmingdale, NY 11735</div>
             </div>
-
-            <div class="footer__contacts contact">
-                <div class="footer__contacts-img contact__img"><img src="assets/icons/Message.svg" alt=""></div>
-                <div class="footer__contacts-info contact__info">contact@greenshop.com</div>
+            <div class="footer__contacts-contact">
+                <div class="footer__contacts-contact-img"><img src="assets/icons/Message.png" alt=""></div>
+                <div class="footer__contact-info">contact@greenshop.com</div>
             </div>
-            
-            <div class="footer__contacts contact">
-                <div class="footer__contacts-img contact__img"><img src="assets/icons/Calling.svg" alt=""></div>
-                <div class="footer__contacts-info contact__info">+88 01911 717 490</div>
+            <div class="footer__contacts-contact">
+                <div class="footer__contacts-contact-img"><img src="assets/icons/Calling.png" alt=""></div>
+                <div class="footer__contact-info">+88 01911 717 490</div>
             </div>
     
             </div>
-
-            <div class="footer__menu myaccount">
+            <div class="footer__myaccount">
                 <h2>My account</h2>
                 <a href="">My account</a>
                 <a href="">Our stores</a>
@@ -575,7 +568,7 @@
                 <a href="">Career</a>
                 <a href="">Specials</a>
             </div>
-            <div class="footer__menu help">
+            <div class="footer__help">
                 <h2>Help & Guide</h2>
                 <a href="">Help Center</a>
                 <a href="">How to Buy</a>
@@ -583,7 +576,7 @@
                 <a href="">Product Policy</a>
                 <a href="">How to Return</a>
             </div>
-            <div class="footer__menu categories">
+            <div class="footer__categories">
                 <h2>Categories</h2>
                 <a href="">House Plants</a>
                 <a href="">Potter Plants</a>
@@ -591,19 +584,19 @@
                 <a href="">Small Plants</a>
                 <a href="">Accessories</a>
             </div>
-            <div class="footer__menu social">
+            <div class="footer__social">
                 <h2>Social Media</h2>
+                <div>
                 <img src="assets/icons/Facebook1.png" alt="">
                 <img src="assets/icons/Instagram2.png" alt="">
                 <img src="assets/icons/Twitter1.png" alt="">
                 <img src="assets/icons/Linkedin1.png" alt="">
                 <img src="assets/icons/Union1.png" alt="">
+                </div>
                 <h2>We accept</h2>
                 <img src="assets/icons/image 16.png" alt="">
             </div>
-        </div>
-        <span class="footer__copy">© 2021 GreenShop. All Rights Reserved.</span>
         </footer>
-    </div>
+
 </body>
 </html>

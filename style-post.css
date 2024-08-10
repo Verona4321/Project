@@ -1,0 +1,28 @@
+.article_container {
+  width: 70%;
+}
+
+#title_img {
+  width: 40%;
+}
+
+.img {
+  width: 60%;
+}
+
+#intro {
+  color: rgba(114, 114, 114, 1);
+  font-size: 11pt;
+}
+
+h1 {
+  font-size: 22pt;
+}
+
+.article_container > h2 {
+  font-size: 17pt;
+}
+
+.text {
+  font-size: 13pt;
+}
